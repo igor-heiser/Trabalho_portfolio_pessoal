@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+}
+
+header {
+    color: rgb(139, 148, 156);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgb(48, 48, 240);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logotipo {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.logotipo span {
+    color: rgb(123, 180, 255);
+}
+
+/* Cor do span do logotipo no footer */
+footer .logotipo span {
+    color: rgb(180, 220, 255);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: rgb(86, 187, 255);
+}
+
+.secao-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    min-height: 80vh;
+}
+
+.secao-principal .conteudo {
+    max-width: 600px;
+}
+
+.texto-apresentacao {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.texto-apresentacao .saudacao {
+    color: rgb(0, 0, 0);
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.texto-apresentacao h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.texto-apresentacao h1 span {
+    color: rgb(123, 180, 255);
+}
+
+.texto-apresentacao p {
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+}
+
+.grupo-botoes {
+    display: flex;
+    gap: 12px 30px;
+    /* padding: 25px removido */
+}
+
+.botao {
+    padding: 12px 30px;
+    transition: 0.3s;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.botao-contratar {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.botao-contratar:hover {
+    background-color: rgb(123, 180, 255);
+}
+
+.botao-trabalhos {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(123, 180, 255);
+}
+
+.botao-trabalhos:hover {
+    color: rgb(0, 0, 0);
+}
+
+.area-imagem {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.moldura-circular {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(123, 180, 255);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* CORRIGIDO: era "flex" que é inválido */
+    border: 5px solid rgb(123, 180, 255);
+}
+
+.moldura-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+footer {
+    background-color: #006494;
+    padding: 40px 8%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.conteudo-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.navegacao-rodape {
+    margin: 15px 0;
+}
+
+.navegacao-rodape a {
+    color: #e8f1f2;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+.navegacao-rodape a:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.direitos-autorais {
+    color: #e8f1f2;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsividade — mobile */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 6%;
+        text-align: center;
+    }
+
+    .logotipo {
+        font-size: 40px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        font-size: 15px;
+        padding: 6px 8px;
+    }
+
+    .secao-principal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 6%;
+        min-height: auto;
+        gap: 40px;
+    }
+
+    .texto-apresentacao h1 {
+        font-size: 34px;
+    }
+
+    .texto-apresentacao .saudacao {
+        font-size: 30px;
+    }
+
+    .grupo-botoes {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .area-imagem {
+        width: 280px;
+        height: 280px;
+    }
+
+    .moldura-circular {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 400px) {
+    .texto-apresentacao h1 {
+        font-size: 28px;
+    }
+
+    .botao {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
