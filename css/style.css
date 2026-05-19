@@ -11,8 +11,8 @@ body {
     line-height: 1.6;
 }
 
+/* ── HEADER ── */
 header {
-    color: rgb(139, 148, 156);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,15 +29,11 @@ header {
     font-weight: bold;
     color: white;
     letter-spacing: 2px;
+    text-decoration: none;
 }
 
 .logotipo span {
     color: rgb(123, 180, 255);
-}
-
-/* Cor do span do logotipo no footer */
-footer .logotipo span {
-    color: rgb(180, 220, 255);
 }
 
 nav ul {
@@ -48,11 +44,8 @@ nav ul {
 
 nav ul li {
     margin-left: 20px;
-    color: white;
-    text-decoration: none;
     font-size: 18px;
     padding: 8px 12px;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a {
@@ -63,114 +56,21 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.ativo {
     color: rgb(86, 187, 255);
 }
 
-.secao-principal {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 8%;
-    min-height: 80vh;
-}
-
-.secao-principal .conteudo {
-    max-width: 600px;
-}
-
-.texto-apresentacao {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: rgb(0, 0, 0);
-}
-
-.texto-apresentacao .saudacao {
-    color: rgb(0, 0, 0);
-    font-size: 42px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.texto-apresentacao h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.texto-apresentacao h1 span {
-    color: rgb(123, 180, 255);
-}
-
-.texto-apresentacao p {
-    color: rgb(0, 0, 0);
-    margin-bottom: 30px;
-}
-
-.grupo-botoes {
-    display: flex;
-    gap: 12px 30px;
-    /* padding: 25px removido */
-}
-
-.botao {
-    padding: 12px 30px;
-    transition: 0.3s;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.botao-contratar {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
-
-.botao-contratar:hover {
-    background-color: rgb(123, 180, 255);
-}
-
-.botao-trabalhos {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    border: 2px solid rgb(123, 180, 255);
-}
-
-.botao-trabalhos:hover {
-    color: rgb(0, 0, 0);
-}
-
-.area-imagem {
-    position: relative;
-    width: 500px;
-    height: 500px;
-}
-
-.moldura-circular {
-    width: 500px;
-    height: 500px;
-    background-color: rgb(123, 180, 255);
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* CORRIGIDO: era "flex" que é inválido */
-    border: 5px solid rgb(123, 180, 255);
-}
-
-.moldura-circular img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
+/* ── FOOTER ── */
 footer {
-    background-color: #006494;
+    background-color: rgb(0, 67, 192);
     padding: 40px 8%;
     text-align: center;
     margin-top: 50px;
+}
+
+footer .logotipo span {
+    color: rgb(180, 220, 255);
 }
 
 .conteudo-rodape {
@@ -189,11 +89,11 @@ footer {
     text-decoration: none;
     margin: 0 15px;
     font-size: 20px;
+    transition: 0.3s;
 }
 
 .navegacao-rodape a:hover {
-    color: #ffffff;
-    transition: 0.3s;
+    color: white;
 }
 
 .direitos-autorais {
@@ -202,72 +102,410 @@ footer {
     font-size: 14px;
 }
 
-/* Responsividade — mobile */
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px 6%;
-        text-align: center;
-    }
-
-    .logotipo {
-        font-size: 40px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        font-size: 15px;
-        padding: 6px 8px;
-    }
-
-    .secao-principal {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 40px 6%;
-        min-height: auto;
-        gap: 40px;
-    }
-
-    .texto-apresentacao h1 {
-        font-size: 34px;
-    }
-
-    .texto-apresentacao .saudacao {
-        font-size: 30px;
-    }
-
-    .grupo-botoes {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .area-imagem {
-        width: 280px;
-        height: 280px;
-    }
-
-    .moldura-circular {
-        width: 280px;
-        height: 280px;
-    }
+/* ── TÍTULO DE PÁGINA (usado em todas as páginas) ── */
+.titulo-pagina {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-@media (max-width: 400px) {
-    .texto-apresentacao h1 {
-        font-size: 28px;
-    }
+.titulo-pagina span {
+    color: rgb(48, 48, 240);
+}
 
-    .botao {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
+.subtitulo-pagina {
+    text-align: center;
+    color: rgb(100, 100, 100);
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+/* ── BOTÕES ── */
+.botao {
+    padding: 12px 30px;
+    transition: 0.3s;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.botao-contratar {
+    background-color: rgb(48, 48, 240);
+    color: white;
+}
+
+.botao-contratar:hover {
+    background-color: rgb(30, 30, 200);
+}
+
+.botao-trabalhos {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(123, 180, 255);
+}
+
+.botao-trabalhos:hover {
+    background-color: rgb(123, 180, 255);
+    color: white;
+}
+
+/* ── INDEX ── */
+.secao-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    min-height: 80vh;
+}
+
+.texto-apresentacao {
+    max-width: 600px;
+}
+
+.texto-apresentacao .saudacao {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.texto-apresentacao h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.texto-apresentacao h1 span {
+    color: rgb(123, 180, 255);
+}
+
+.texto-apresentacao p {
+    font-size: 18px;
+    color: rgb(50, 50, 50);
+    margin-bottom: 20px;
+}
+
+.frase-destaque {
+    font-style: italic;
+    color: rgb(48, 48, 240);
+    border-left: 4px solid rgb(123, 180, 255);
+    padding-left: 14px;
+    margin-bottom: 30px;
+}
+
+.grupo-botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.area-imagem {
+    width: 440px;
+    height: 440px;
+}
+
+.moldura-circular {
+    width: 440px;
+    height: 440px;
+    background-color: rgb(123, 180, 255);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(48, 48, 240);
+}
+
+.moldura-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── SOBRE ── */
+.secao-sobre {
+    padding: 60px 8%;
+}
+
+.sobre-conteudo {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.sobre-imagem {
+    width: 300px;
+    height: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 4px solid rgb(123, 180, 255);
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-texto h2 {
+    font-size: 30px;
+    color: rgb(48, 48, 240);
+    margin-bottom: 6px;
+}
+
+.sobre-texto .cargo {
+    color: rgb(100, 100, 100);
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    color: rgb(50, 50, 50);
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+.sobre-info {
+    background-color: rgb(240, 244, 255);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.sobre-info p {
+    margin-bottom: 8px;
+}
+
+.sobre-info p strong {
+    color: rgb(48, 48, 240);
+}
+
+/* ── SERVIÇOS ── */
+.secao-servicos {
+    padding: 60px 8%;
+}
+
+.lista-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card-servico {
+    background-color: rgb(240, 244, 255);
+    border-radius: 10px;
+    padding: 30px 24px;
+    border-left: 5px solid rgb(48, 48, 240);
+    width: 300px;
+    transition: 0.3s;
+}
+
+.card-servico:hover {
+    box-shadow: 0 8px 20px rgba(48, 48, 240, 0.15);
+}
+
+.card-servico .icone {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.card-servico h3 {
+    font-size: 20px;
+    color: rgb(48, 48, 240);
+    margin-bottom: 10px;
+}
+
+.card-servico p {
+    font-size: 14px;
+    color: rgb(60, 60, 60);
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.card-servico .preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 100, 148);
+}
+
+/* ── HABILIDADES ── */
+.secao-habilidades {
+    padding: 60px 8%;
+}
+
+.habilidades-conteudo {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.coluna h3 {
+    font-size: 22px;
+    color: rgb(48, 48, 240);
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(123, 180, 255);
+    padding-bottom: 8px;
+}
+
+.habilidade-item {
+    margin-bottom: 18px;
+}
+
+.habilidade-item p {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.habilidade-item span {
+    font-size: 13px;
+    color: rgb(48, 48, 240);
+    font-weight: normal;
+}
+
+.barra-fundo {
+    width: 300px;
+    background-color: rgb(220, 225, 240);
+    border-radius: 20px;
+    height: 12px;
+}
+
+.barra-progresso {
+    height: 12px;
+    background-color: rgb(48, 48, 240);
+    border-radius: 20px;
+}
+
+.lista-pessoais {
+    list-style: none;
+}
+
+.lista-pessoais li {
+    background-color: rgb(240, 244, 255);
+    border: 2px solid rgb(123, 180, 255);
+    color: rgb(48, 48, 240);
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* ── CONTATO ── */
+.secao-contato {
+    padding: 60px 8%;
+}
+
+.contato-conteudo {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.info-contato h3 {
+    font-size: 22px;
+    color: rgb(48, 48, 240);
+    margin-bottom: 20px;
+}
+
+.info-contato p {
+    font-size: 15px;
+    color: rgb(50, 50, 50);
+    margin-bottom: 14px;
+}
+
+.info-contato p strong {
+    color: rgb(48, 48, 240);
+    display: block;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.redes-sociais {
+    margin-top: 30px;
+}
+
+.redes-sociais h4 {
+    color: rgb(48, 48, 240);
+    margin-bottom: 12px;
+}
+
+.redes-sociais a {
+    background-color: rgb(48, 48, 240);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 8px;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+    background-color: rgb(123, 180, 255);
+    color: black;
+}
+
+.formulario h3 {
+    font-size: 22px;
+    color: rgb(48, 48, 240);
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+    margin-bottom: 6px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 400px;
+    padding: 12px 14px;
+    border: 2px solid rgb(200, 210, 240);
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(248, 250, 255);
+    margin-bottom: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: rgb(48, 48, 240);
+}
+
+.formulario textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.botao-enviar {
+    width: 400px;
+    padding: 14px;
+    background-color: rgb(48, 48, 240);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.botao-enviar:hover {
+    background-color: rgb(30, 30, 200);
 }

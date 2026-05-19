@@ -1,64 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Igor | Portfólio</title>
-     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Cabeçalho com logotipo e navegação -->
-     <header>
-        <div class="logotipo">Port<span>fólio</span></div> <!-- Logotipo do site -->
+    <header>
+        <a href="index.html" class="logotipo">Port<span>fólio</span></a>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li> <!-- Link para o tipo de página-->
-                <li><a href="#">Sobre</a></li> <!-- Link para a seção sobre-->
-                <li><a href="#">Serviços</a></li> <!-- Link para a seção serviços-->
-                <li><a href="#">Habilidades</a></li> <!-- Link para a seção skills-->
-                <li><a href="#">Contato</a></li> <!-- Link para o formulário de contato-->
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-     </header>
+    </header>
 
-     <!-- Seção principal da apresentação -->
-      <main class="secao-principal">
+    <main class="secao-principal">
         <div class="texto-apresentacao">
-            <h1>Olá, eu me chamo <span>Igor!</span></h1> <!-- Nome em destaque -->
-            <p>Sou Freelancer e Web Developer com 5 anos de experiência tranformando ideias.</p>
-
+            <h1>Olá, eu me chamo <span>Igor!</span></h1>
+            <p>Sou Freelancer e Web Developer com 5 anos de experiência transformando ideias em sites incríveis.</p>
+            <p class="frase-destaque">"Código limpo, design bonito e soluções que fazem a diferença."</p>
             <div class="grupo-botoes">
-                <a href="#" class="botao botao-contratar">Contrate-me</a> <!-- Botão de a -->
-                <a href="#" class="botao botao-trabalhos">Meus trabalhos</a> <!-- Botão de-->
+                <a href="contato.html" class="botao botao-contratar">Contrate-me</a>
+                <a href="servicos.html" class="botao botao-trabalhos">Meus trabalhos</a>
             </div>
         </div>
 
-        <!-- Área da Imagem de Perfil -->
-         <div class="area-imagem">
+        <div class="area-imagem">
             <div class="moldura-circular">
-                <!-- Imagem de exemplo -->
-                 <img src="https://avatars.githubusercontent.com/u/244794971?s=400&u=372a546616df4017fc7b841c891d7dceceb044c5&v=4">
+                <img src="https://avatars.githubusercontent.com/u/244794971?s=400&u=372a546616df4017fc7b841c891d7dceceb044c5&v=4" alt="Foto de perfil de Igor">
             </div>
-         </div>
-      </main>
-
-      <!-- Rodapé do Site -->
-       <footer>
-        <div class="conteudo-rodape">
-            <div class="logotipo">Port<span>fólio</span></div> <!-- Repetição da logo no -->
-            <div class="navegacao-rodape">
-                <a href="#">Linkedin</a> <!-- Link social -->
-                <a href="#">Github</a> <!-- Link social -->
-                <a href="#">Instagram</a> <!-- Link social -->
-                <a href="#">E-mail</a> <!-- Link social -->
-            </div> 
         </div>
-        <p class="direitos-autorais">&copy; 2026 - Todos os direitos reservados</p>
-       </footer>
+    </main>
+
+    <footer>
+        <div class="conteudo-rodape">
+            <a href="index.html" class="logotipo">Port<span>fólio</span></a>
+            <div class="navegacao-rodape">
+                <a href="#">Linkedin</a>
+                <a href="#">Github</a>
+                <a href="#">Instagram</a>
+                <a href="#">E-mail</a>
+            </div>
+        </div>
+        <p class="direitos-autorais">&copy; 2026 Igor — Todos os direitos reservados</p>
+    </footer>
+
 </body>
 </html>
